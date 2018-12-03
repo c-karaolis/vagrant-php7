@@ -11,6 +11,10 @@ class Build
       config.vm.network "public_network", type: "dhcp"
     end
 
+
+    # config.ssh.insert_key = false
+    # config.ssh.username = "ckaraolis"
+    # config.ssh.password = "a"
     # Configure A Few VirtualBox Settings
     config.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "2048"]
